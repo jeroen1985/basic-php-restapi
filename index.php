@@ -44,11 +44,11 @@ class Api{
 	*/
 	private static $postDataIncomplete = "POST data incomplete or incorrect, format should be 'brand=Toyotota&type=RAV4&color=Green&drive=2WD&engine=2.4L'";
 
-    /*
+    	/*
 	* Property: eMsgInvalidCategory
 	* Description: error message in case invalid category is selected
 	*/
-    private static $eMsgInvalidCategory = "Invalid category";
+    	private static $eMsgInvalidCategory = "Invalid category";
     
 	/*
 	* Method: __construct
@@ -83,13 +83,13 @@ class Api{
 				$returnData = $this->processPostRequest();
 			break;
 			case "PUT":
-                // PUT can be added here
+                		// PUT can be added here
 				$returnData = self::$eMsgUnsupportedMethod;
-            break;
-            case "DELETE":
-                //Delete can be added here
+            		break;
+            		case "DELETE":
+                		//Delete can be added here
 				$returnData = self::$eMsgUnsupportedMethod;
-            break;
+            		break;
 			Default:
 				$returnData = self::$eMsgUnsupportedMethod;
 		}
