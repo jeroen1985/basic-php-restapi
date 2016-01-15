@@ -21,13 +21,13 @@ Class Data{
 		array("Brand" => "Ford","Type" => "F-350","Color" => "Blue","Drive" => "2WD","Engine" => "4.2L"),array("Brand" => "Ford","Type" => "F-350","Color" => "Red","Drive" => "4WD","Engine" => "5.4L"),array("Brand" => "Ford","Type" => "F-350","Color" => "Black","Drive" => "4WD","Engine" => "6.8L"),
 	 	array("Brand" => "Ford","Type" => "Escape","Color" => "Blue","Drive" => "2WD","Engine" => "3.2L"),array("Brand" => "Ford","Type" => "Escape","Color" => "Red","Drive" => "4WD","Engine" => "3.4L"),array("Brand" => "Ford","Type" => "Escape","Color" => "Black","Drive" => "4WD","Engine" => "5.8L"));
 			
-    /*
+    	/*
 	* Property: MsgIndexOutOfBound
 	* Description: error message in case the array index is out of the max index range
 	*/
-    private static $eMsgIndexOutOfBound = "Invalid index out of bound";
+    	private static $eMsgIndexOutOfBound = "Invalid index out of bound";
 
-    /*
+    	/*
 	* Property: sMsgAdded
 	* Description: success message in a row is successfully added
 	*/
@@ -92,7 +92,7 @@ Class Data{
 	* Return value: string status message
 	*/
 	public function setProduct($postData){
-        switch($this->category){
+        	switch($this->category){
 			case "cars":
 				$this->dataSetCars[] = array($postData);	
 				$return = self::$sMsgAdded; 
