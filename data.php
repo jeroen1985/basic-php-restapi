@@ -73,15 +73,15 @@ Class Data{
 	*/
 	public function getProduct($productId=''){
         switch($this->category){
-			case "cars":
-				if ($productId < count($this->dataSetCars)){
-					$return = $this->dataSetCars[$productId];
-				}else{
-					$return = self::$eMsgIndexOutOfBound;
-				}
-			break;
-			Default:
-				$return = null;
+		case "cars":
+			if ($productId < count($this->dataSetCars)){
+				$return = $this->dataSetCars[$productId];
+			}else{
+				$return = self::$eMsgIndexOutOfBound;
+			}
+		break;
+		Default:
+			$return = null;
 		} 
         return $return;
 	}
