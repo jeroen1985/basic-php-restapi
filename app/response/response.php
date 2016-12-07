@@ -2,22 +2,22 @@
 namespace App\Response;
 
 class Response{
-	/*
-	* Property: header
-	* Description: standard header content type
-	*/  
+    /*
+    * Property: header
+    * Description: standard header content type
+    */  
     private $header = 'Content-Type: application/json';
 
-	/*
-	* Property: body
-	* Description: response body
-	*/  
+    /*
+    * Property: body
+    * Description: response body
+    */  
     private $body = null;
 
-	/*
-	* Property: error
-	* Description: response error
-	*/  
+    /*
+    * Property: error
+    * Description: response error
+    */  
     private $error = null;
 
     public function __construct($body = null, $error = null){
