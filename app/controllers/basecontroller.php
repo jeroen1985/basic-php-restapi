@@ -6,15 +6,15 @@ use App\Response\ResponseHandler;
 
 abstract class BaseController{
     /*
-	* Property: dataRepository
-	* Description: data object
-	*/
+    * Property: dataRepository
+    * Description: data object
+    */
     protected $dataRepository = null;
 
-	/*
-	* Property: responseHandler
-	* Description: responseHandler object
-	*/  
+    /*
+    * Property: responseHandler
+    * Description: responseHandler object
+    */  
     protected $responseHandler = null;
 
     abstract public function retrieve();
