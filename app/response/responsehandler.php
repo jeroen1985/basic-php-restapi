@@ -5,16 +5,16 @@ use App\Response\Response;
 use App\ErrorHandling\Errors;
 
 class ResponseHandler{
-	/*
-	* Property: response
-	* Description: response object
-	*/  
+    /*
+    * Property: response
+    * Description: response object
+    */  
     private $response;
 
-	/*
-	* Property: error
-	* Description: is there an error? true/false
-	*/  
+    /*
+    * Property: error
+    * Description: is there an error? true/false
+    */  
     private $error = false;
 
     public function handler(response $response){
