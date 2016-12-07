@@ -133,10 +133,10 @@ class Router{
 		case "car":
 		    switch($this->cleanHttpMethod){
 			case "GET":
-				$this->registeredControllers['car']->retrieve();
+			    $this->registeredControllers['car']->retrieve();
 			break;
 			case "POST":
-				$this->registeredControllers['car']->process();
+			    $this->registeredControllers['car']->process();
 			break;
 		    }
 		break;
