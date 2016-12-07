@@ -1,0 +1,15 @@
+{
+    "name": "Simple Web API",
+    "description": "Simple Web API.",
+    "keywords": ["Simple", "Web", "API"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": ">=5.5.27"
+    },
+    "autoload": {
+        "psr-4": {"Src\\": "src/",
+                  "Data\\": "data/",
+                  "App\\": "app/"}
+    }
+}

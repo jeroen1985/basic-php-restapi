@@ -1,5 +1,11 @@
 <?
-Class Data{
+namespace Data;
+
+use App\Response\Response;
+use App\Response\ResponseHandler;
+use App\ErrorHandling\Errors;
+
+Class DataRepository{
 	/*
 	* Property: category
 	* Description: the category data type value
@@ -21,18 +27,6 @@ Class Data{
 		array("Brand" => "Ford","Type" => "F-350","Color" => "Blue","Drive" => "2WD","Engine" => "4.2L"),array("Brand" => "Ford","Type" => "F-350","Color" => "Red","Drive" => "4WD","Engine" => "5.4L"),array("Brand" => "Ford","Type" => "F-350","Color" => "Black","Drive" => "4WD","Engine" => "6.8L"),
 	 	array("Brand" => "Ford","Type" => "Escape","Color" => "Blue","Drive" => "2WD","Engine" => "3.2L"),array("Brand" => "Ford","Type" => "Escape","Color" => "Red","Drive" => "4WD","Engine" => "3.4L"),array("Brand" => "Ford","Type" => "Escape","Color" => "Black","Drive" => "4WD","Engine" => "5.8L"));
 			
-    	/*
-	* Property: MsgIndexOutOfBound
-	* Description: error message in case the array index is out of the max index range
-	*/
-    	private static $eMsgIndexOutOfBound = "Invalid index out of bound";
-
-    	/*
-	* Property: sMsgAdded
-	* Description: success message in a row is successfully added
-	*/
-	private static $sMsgAdded = "Row successfully added";
-
 	/*
 	* Method: setCategory
 	* Description: sets the product category that determines the data used
@@ -42,7 +36,7 @@ Class Data{
 		$this->category = $category;
 		
 		switch($this->category){
-			case "cars":
+			case "car":
 				$this->categoryValid = true;
 			break;
 			Default:
@@ -57,7 +51,7 @@ Class Data{
 	*/
 	public function getProducts(){
 		switch($this->category){
-			case "cars":
+			case "car":
 				$return = $this->dataSetCars;
 			break;
 			Default:
@@ -73,11 +67,11 @@ Class Data{
 	*/
 	public function getProduct($productId=''){
         switch($this->category){
-		case "cars":
-			if ($productId < count($this->dataSetCars)){
-				$return = $this->dataSetCars[$productId];
+		case "car":
+			if ($productId <= count($this->dataSetCars) && $productId > 0){
+				$return = $this->dataSetCars[$productId-1];
 			}else{
-				$return = self::$eMsgIndexOutOfBound;
+				(new responseHandler)->handler(new Response(null, Errors::handleError('eMsgIndexOutOfBound')));	
 			}
 		break;
 		Default:
@@ -93,12 +87,12 @@ Class Data{
 	*/
 	public function setProduct($postData){
         	switch($this->category){
-			case "cars":
-				$this->dataSetCars[] = array($postData);	
-				$return = self::$sMsgAdded; 
+			case "car":
+				$this->dataSetCars[] = $postData;	
+				$return = true;
 			break;
 			Default:
-				$return = null;				
+				$return = false;				
 		} 
         return $return;
 	}
