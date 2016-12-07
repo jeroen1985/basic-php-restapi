@@ -3,45 +3,45 @@ namespace App\ErrorHandling;
 
 class Errors{
     /*
-	* Property: eMsgUnknownError
-	* Description: error message unknown error
-	*/
-  	private static $eMsgUnknownError = ['Error Msg'=>'Unknown error'];
+    * Property: eMsgUnknownError
+    * Description: error message unknown error
+    */
+    private static $eMsgUnknownError = ['Error Msg'=>'Unknown error'];
 
     /*
-	* Property: eMsgUnsupportedMethod
-	* Description: error message in case an unsupported method is used
-	*/
-  	private static $eMsgUnsupportedMethod = ['Error Msg'=>'Unsupported method used'];
+    * Property: eMsgUnsupportedMethod
+    * Description: error message in case an unsupported method is used
+    */
+    private static $eMsgUnsupportedMethod = ['Error Msg'=>'Unsupported method used'];
 
-  	/*
-	* Property: eMsgPostDataIncomplete
-	* Description: error message in case the POST data is incomplete/incorrect
-	*/
-	private static $eMsgPostDataIncomplete = ['Error Msg'=>'POST data incomplete or incorrect, format should be brand=Toyotota&type=RAV4&color=Green&drive=2WD&engine=2.4L'];
+    /*
+    * Property: eMsgPostDataIncomplete
+    * Description: error message in case the POST data is incomplete/incorrect
+    */
+    private static $eMsgPostDataIncomplete = ['Error Msg'=>'POST data incomplete or incorrect, format should be brand=Toyotota&type=RAV4&color=Green&drive=2WD&engine=2.4L'];
 
-    	/*
-	* Property: eMsgInvalidCategory
-	* Description: error message in case invalid category is selected
-	*/
+    /*
+    * Property: eMsgInvalidCategory
+    * Description: error message in case invalid category is selected
+    */
     private static $eMsgInvalidCategory = ['Error Msg'=>'Invalid category'];
 
     /*
-	* Property: eMsgIndexOutOfBound
-	* Description: error message in case the array index is out of the max index range
-	*/
-	private static $eMsgIndexOutOfBound = ['Error Msg'=>'Invalid index out of bound'];
+    * Property: eMsgIndexOutOfBound
+    * Description: error message in case the array index is out of the max index range
+    */
+    private static $eMsgIndexOutOfBound = ['Error Msg'=>'Invalid index out of bound'];
 
     /*
-	* Property: eMsgUnsupportedVersion
-	* Description: error message in case an unsupported method is used
-	*/
-  	private static $eMsgUnsupportedVersion= ['Error Msg'=>'Unsupported version used'];
+    * Property: eMsgUnsupportedVersion
+    * Description: error message in case an unsupported method is used
+    */
+    private static $eMsgUnsupportedVersion= ['Error Msg'=>'Unsupported version used'];
 
     /*
-	* Property: eMsgInvalidRequest
-	* Description: error message in case the request is invalid
-	*/
+    * Property: eMsgInvalidRequest
+    * Description: error message in case the request is invalid
+    */
     private static $eMsgInvalidRequest = ['Error Msg'=>'Invalid Request'];
 
     private static function getEMsgUnknownError(){
